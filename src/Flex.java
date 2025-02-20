@@ -52,6 +52,8 @@ public class Flex {
         System.out.println(sack.pull());
         System.out.println(sack);
 
+        System.out.println(sack.pull(5));
+        System.out.println(sack);
 
     }
 }

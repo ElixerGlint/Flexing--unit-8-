@@ -34,6 +34,19 @@ public class marblebag {
         return (marbles.remove(temp));
     }
 
+    public String pull(int amount) {
+        String output = "";
+        if(marbles.size() < amount) {
+            return "No marbles left!";
+        }
+
+        for(int i = 0; i < amount; i++) {
+            int temp = (int)(Math.random()*marbles.size());
+            output += (marbles.remove(temp));
+        }
+        return output;
+    }
+
     @Override
     public String toString() {
         return "marblebag [marbles=" + marbles + "]";
