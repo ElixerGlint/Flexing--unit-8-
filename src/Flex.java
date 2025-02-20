@@ -39,10 +39,19 @@ public class Flex {
         for(int i = 0; i < rolls.size(); i++) {
             if (rolls.get(i) > 9) {
             highRollers.add(rolls.remove(i--));
+            //or put i-- here
             }
         }
 
         System.out.println(highRollers);
+        
+
+        marblebag sack = new marblebag(10);
+
+        System.out.println(sack);
+        System.out.println(sack.pull());
+        System.out.println(sack);
+
 
     }
 }
