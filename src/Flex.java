@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Flex {
     public static void main(String[] args) throws Exception {
@@ -55,5 +56,31 @@ public class Flex {
         System.out.println(sack.pull(5));
         System.out.println(sack);
 
+        ArrayList<Integer> number = new ArrayList<Integer>(Arrays.asList(1,2,0,0,5,0,2,0,4)); //equivilent to doing int[] abc = {1,2,4}
+        System.out.println(number);
+        movezerostostart(number);
+        System.out.println(number);
+        movezerostoend(number);
+        System.out.println(number);
+
     }
+
+    public static void movezerostoend(ArrayList<Integer> list) {
+        for(int i = list.size()-1; i > -1; i--) {
+            if(list.get(i) == 0) {
+                list.add(list.remove(i));
+
+            }
+        }
+    }
+
+    public static void movezerostostart(ArrayList<Integer> list) {
+        for(int i = 0; i < list.size(); i++) {
+            if(list.get(i) == 0) {
+                list.add(0,list.remove(i));
+            }
+        }
+    }
+
+
 }
