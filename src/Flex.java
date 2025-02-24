@@ -74,9 +74,26 @@ public class Flex {
 
 
 
-        Towers game = new Towers(4);
+        Towers game = new Towers(3);
         System.out.println(game);
-        game.makemove("A", "B");
+        //game.makemove("A", "B");
+
+        while(!game.issolved()) {
+            game.makemove("A", "B");
+            System.out.println(game);
+            Thread.sleep(500);
+            if(!game.issolved()) {
+                game.makemove("A", "C");
+                System.out.println(game);
+                Thread.sleep(500);
+                if(!game.issolved()) {
+                    game.makemove("C", "B");
+                    System.out.println(game);
+                    Thread.sleep(500);
+                }
+            }
+        }
+
         System.out.println(game);
     }
 

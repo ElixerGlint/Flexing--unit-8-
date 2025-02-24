@@ -36,6 +36,10 @@ public class Towers {
         return;
     }
 
+    public boolean issolved() {
+        return a.size() == 0 && b.size() == 0;
+    }
+
     public ArrayList<Integer> getpeg(String peg) {
         if(peg.equals("A")) {
             return a;
