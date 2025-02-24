@@ -74,7 +74,9 @@ public class Flex {
 
 
 
-        Towers game = new Towers(3);
+        Towers game = new Towers(4);
+        System.out.println(game);
+        game.makemove("A", "B");
         System.out.println(game);
     }
 
