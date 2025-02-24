@@ -34,6 +34,7 @@ public class marblebag {
         return (marbles.remove(temp));
     }
 
+    /* 
     public String pull(int amount) {
         String output = "";
         if(marbles.size() < amount) {
@@ -45,14 +46,21 @@ public class marblebag {
             output += (marbles.remove(temp));
         }
         return output;
-    }
+    }*/
 
     @Override
     public String toString() {
         return "marblebag [marbles=" + marbles + "]";
     }
 
+    public marblebag pull(int count) {
+        marblebag output = new marblebag(0);
 
+        for(int i = 0; i < count; i++) {
+            output.marbles.add(this.pull());
+        }
+        return output;
+    }
 
     
 }
