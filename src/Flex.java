@@ -3,6 +3,7 @@ import java.util.Arrays;
 
 public class Flex {
     public static void main(String[] args) throws Exception {
+        /* 
         System.out.println("Hello, World!");
         ArrayList<Integer> rolls = new ArrayList<>();
         int roll;
@@ -19,12 +20,12 @@ public class Flex {
         }
         else{
             rolls.add(2,13);
-        }*/
+        }
         
         //rolls.add(Math.min(10,rolls.size()),13);
         //System.out.println(rolls);
 
-        /* 
+        
         rolls.remove((Integer)7);
         System.out.println(rolls);
         rolls.remove(7);
@@ -33,7 +34,7 @@ public class Flex {
         System.out.println(rolls);
         System.out.println(rolls.remove((Integer) 3));
         //ADD AND REMOVE can crash
-        */
+        
 
         ArrayList<Integer> highRollers = new ArrayList<>();
        
@@ -63,6 +64,18 @@ public class Flex {
         movezerostoend(number);
         System.out.println(number);
 
+        //marblebag Huck = new marblebag(10);
+
+        System.out.println("hello");
+        
+        */
+
+        //MAIN CLASS
+
+
+
+        Towers game = new Towers(3);
+        System.out.println(game);
     }
 
     public static void movezerostoend(ArrayList<Integer> list) {
@@ -81,10 +94,5 @@ public class Flex {
             }
         }
     }
-
-
-    //marblebag Huck = new marblebag(10);
-
-    System.out.println("hello");
 
 }
