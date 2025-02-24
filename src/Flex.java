@@ -79,7 +79,7 @@ public class Flex {
         //game.makemove("A", "B");
 
         while(!game.issolved()) {
-            game.makemove("A", "B");
+            game.makemove("A", "B"); //if even do this way, if odd do A -> C first
             System.out.println(game);
             Thread.sleep(500);
             if(!game.issolved()) {
